@@ -1,0 +1,356 @@
+@charset "UTF-8";
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.menu {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  -ms-align-items: center;
+  align-items: center;
+  padding-top: 27px;
+  padding-bottom: 37px;
+}
+
+.block_menu-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.menu_info {
+  font-weight: 700;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-direction: row;
+  -ms-align-items: center;
+  align-items: center;
+}
+.menu_info:before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 1px;
+  background-color: #000000;
+  color: red;
+  margin-right: 19px;
+}
+.menu_info ul {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  padding-left: 0;
+}
+.menu_info li {
+  text-transform: uppercase;
+}
+.menu_info a {
+  margin-left: 47px;
+}
+.menu_info a:hover {
+  color: #000000;
+}
+.menu_info a:first-child {
+  margin-left: 0;
+}
+
+.gamburger {
+  display: none;
+}
+
+.footer {
+  margin-top: 147px;
+}
+.footer img {
+  margin: 0 auto;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
+  margin-top: 45px;
+  padding-top: 23px;
+  padding-bottom: 23px;
+}
+
+.end {
+  margin: 37px 0px 46px 0px;
+}
+.end p {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 300;
+  color: #777777;
+}
+.end span {
+  color: #202020;
+}
+
+.container {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #777777;
+}
+
+body {
+  background-color: #fafafa;
+}
+
+.slider_block {
+  background: url("../img/slider/1.png") no-repeat center;
+  background-size: cover;
+}
+.slider_block .slider_container {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1375px;
+  margin: 0 auto;
+}
+.slider_block .slider_content--text {
+  display: none;
+}
+.slider_block .activ {
+  display: block;
+}
+.slider_block h1 {
+  font-size: 48px;
+  text-transform: uppercase;
+  background-color: #000000;
+  color: #ffffff;
+  font-weight: 300;
+  line-height: 56px;
+  padding-left: 47px;
+  padding-right: 42px;
+  margin-top: 264px;
+  margin-bottom: 37px;
+}
+.slider_block p {
+  font-size: 18px;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #000000;
+  margin-bottom: 281px;
+  text-align: center;
+}
+
+.circhle {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.circhle:hover {
+  background-color: #000000;
+}
+.circhle .deg {
+  width: 18px;
+  height: 18px;
+  border-top: 1px solid #ffffff;
+  border-right: 1px solid #ffffff;
+  transform: rotate(225deg);
+  margin: 0 auto;
+  margin-top: 10px;
+}
+.circhle .deg-right {
+  transform: rotate(45deg);
+}
+
+.sub_menu {
+  justify-content: center;
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+  margin-top: 33px;
+  margin-bottom: 30px;
+}
+.sub_menu:before {
+  display: none;
+}
+.sub_menu span {
+  display: block;
+  content: "";
+  width: 2px;
+  height: 31px;
+  background-color: #e1e1e1;
+  color: #ffffff;
+  transform: rotate(15deg);
+  margin-left: 12px;
+}
+
+.img_block {
+  background-color: #fafafa;
+}
+.img_block .img_items {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.img_block .img_items .img_item {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-direction: column;
+}
+.img_block .img_items .img_item .img_block-content {
+  margin-bottom: 35px;
+}
+.img_block .img_items .img_item img {
+  width: 100%;
+  max-width: 360px;
+}
+.img_block .img_items .img_item a {
+  position: relative;
+}
+.img_block .img_items .img_item a span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  color: #c7c7c7;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 100px;
+  text-align: center;
+}
+.img_block .img_items .img_item a:hover span {
+  opacity: 1;
+}
+
+.btn {
+  text-align: center;
+}
+.btn a {
+  color: #ffffff;
+  padding-right: 24px;
+  padding-top: 10px;
+  padding-left: 24px;
+  padding-bottom: 10px;
+  background-color: #777777;
+  border-radius: 2px;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.icon_item {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 420px;
+  margin: 0 auto;
+}
+.icon_item img {
+  width: 14px;
+  height: 14px;
+}
